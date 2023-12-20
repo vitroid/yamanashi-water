@@ -1,0 +1,2 @@
+sync:
+	rsync -av --include="*/" --include="*_19202030.csv" --include="*_19206010.csv" --include="*_19441030.csv" --include="*_19204010.csv" --exclude="*" 192.168.3.10:/ssd1/matto/AIR/github/edamame2/19 .
