@@ -11,6 +11,9 @@ matplotlib = "*"
 japanize-matplotlib = "*"
 scipy = "*"
 plotly = "*"
+textract = "*"
+tabula-py = "*"
+jpype1 = "*"
 
 [dev-packages]
 

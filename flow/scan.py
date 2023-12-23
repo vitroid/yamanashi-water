@@ -26,9 +26,7 @@ tables = tabula.read_pdf(pdf_path, pages="all")
 
 assert len(tables) == len(tabletitles)
 
-bridges = ["昭和橋", "大月橋", "桂川橋", "富士見橋"]
-# bridges = ["桂川橋"]
-
+bridges = ["昭和橋", "大月橋", "桂川橋", "富士見橋", "鶴川橋", "西方寺橋", "落合橋", "流川", "道志川", "秋山川"]
 
 newtables = {}
 for table, title in zip(tables, tabletitles):
@@ -49,7 +47,11 @@ for table, title in zip(tables, tabletitles):
     if int(year) in (2000, 2001):
         subtable = table.loc[["採取月日", "流量\r(年平均)", "全窒素"]]
     else:
-        subtable = table.loc[["採取月日", "流量", "全窒素"]]
+        try:
+            subtable = table.loc[["採取月日", "流量", "全窒素"]]
+        except:
+            subtable = table.loc[["採取月日", "3流量m/s", "全窒素mg/l"]]
+            subtable.index = ["採取月日", "流量", "全窒素"]
     # print(table.index)
 
     if bridge in newtables:
