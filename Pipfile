@@ -14,6 +14,8 @@ plotly = "*"
 textract = "*"
 tabula-py = "*"
 jpype1 = "*"
+geopandas = "*"
+openpyxl = "*"
 
 [dev-packages]
 
