@@ -8,3 +8,10 @@ air/昭和橋.html
 air/桂川橋.html
 flow/山梨9地点流量と全窒素.tsv
 Icon?
+気象庁雨量（大月）/*
+神奈川県河港課水位・雨量データ/*
+flow/Unused/山梨4地点流量と全窒素.tsv
+flow/Unused/山梨9地点流量と全窒素.tsv
+大月open-meteo&気象庁.csv
+*.pyc
+

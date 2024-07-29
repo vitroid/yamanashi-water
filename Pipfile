@@ -16,6 +16,9 @@ tabula-py = "*"
 jpype1 = "*"
 geopandas = "*"
 openpyxl = "*"
+statsmodels = "*"
+seaborn = "*"
+scikit-learn = "*"
 
 [dev-packages]
 

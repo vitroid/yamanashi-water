@@ -1,7 +1,8 @@
 all:
-	ls 2???.pdf | sed -e s/pdf/pickle/ | xargs make
-	python stack.py
+# csvファイルは手で修正しているので、うかつに上書きしないように。
+	# ls 2???.pdf | sed -e s/pdf/csv/ | xargs make
+	python combine.py
 
-%.pickle: %.pdf scan.py
-	python scan.py $* 
+%.csv: %.pdf # pdf2csv.py
+	python pdf2csv.py $* 
 
