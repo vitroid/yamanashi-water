@@ -17,9 +17,9 @@ def assume_year(s: str) -> str:
     return sorted(candids.keys(), key=lambda x: candids[x], reverse=True)[0]
 
 
-def scan_data(column, BASEDIR):
+def read_rain_hourly(datapath, column):
     dfs = []
-    for root, dirs, files in os.walk(f"{BASEDIR}../神奈川県河港課水位・雨量データ"):
+    for root, _, files in os.walk(datapath):
         for file in files:
             if file[-4:] == ".csv":
                 filename = root + "/" + file
@@ -62,6 +62,7 @@ def scan_data(column, BASEDIR):
         dfs = dfs[dfs.datetime.dt.minute == 0]
         # 単純な重複データはここで落とす
         dfs = dfs.drop_duplicates()
+        dfs = dfs.set_index("datetime", drop=True)
         return dfs
 
     return None

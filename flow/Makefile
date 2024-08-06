@@ -6,3 +6,5 @@ all:
 %.csv: %.pdf # pdf2csv.py
 	python pdf2csv.py $* 
 
+%_P.csv: %.pdf # pdf2csv.py
+	python pdf2csv_P.py $* 

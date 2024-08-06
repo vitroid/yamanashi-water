@@ -19,6 +19,7 @@ openpyxl = "*"
 statsmodels = "*"
 seaborn = "*"
 scikit-learn = "*"
+sympy = "*"
 
 [dev-packages]
 
